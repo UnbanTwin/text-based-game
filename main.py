@@ -1,3 +1,5 @@
 
 health = 100
-inventory = []
+inventory = [""]
+
+
