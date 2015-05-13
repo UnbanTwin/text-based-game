@@ -1,5 +1,7 @@
+inport random
 
-health = 100
+health = 200 * random.random()
+mana = 200 * random.randon()
 inventory = [""]
 
 
