@@ -1,1 +1,1 @@
-# A text-based-game
+# A text based game
