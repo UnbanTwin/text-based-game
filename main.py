@@ -6,7 +6,6 @@ import player
 
 
 def new_player():
-  print ("Welcome to title here")
   print ("First of all, please select a class:")
   print ("\t[R]anger")
   print ("\t[W]arrior")
@@ -17,6 +16,10 @@ def new_player():
   print ("\t[C]leric")
   print ("\t[D]ruid")
   print ("\t[C]leric")
+  theclass = input("Please type the letter of the class")
+  switch theclass:
+    case "R":
+      
   
 startgame = input("If you are a new player type new player \nif you are an existing player type login\n ")
 
