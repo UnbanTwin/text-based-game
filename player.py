@@ -7,4 +7,3 @@ class player(object):
     self.skill = random.randint(minskill, maxskill)
     self.name = name
     self.race = race
-    
