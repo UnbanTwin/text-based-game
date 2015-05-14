@@ -20,7 +20,7 @@ def new_player():
   
 startgame = input("If you are a new player type new player \nif you are an existing player type login\n ")
 
-if startgame == "new player":
+if startgame.lower() == "new player":
     new_player();  
   
   
