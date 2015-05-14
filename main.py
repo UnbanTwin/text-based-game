@@ -1,7 +1,23 @@
 import random
+import player
+#import :)
 
-health = 200 * random.random() + 100
-mana = 200 * random.randon() + 50
-inventory = [""]
 
+def new_player():
+  print ("Welcome to title here")
+  print ("First of all, please select a class:")
+  print ("\t[R]anger")
+  print ("\t[W]arrior")
+  print ("\t[M]age")
+  print ("\tR[o]uge")
+  print ("\t[P]aladin")
+  print ("\t[B]arbarian")
+  print ("\t[C]leric")
+  print ("\t[D]ruid")
+  print ("\t[C]leric")
+  
+  
+  
+  
+  
 
