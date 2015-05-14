@@ -1,6 +1,6 @@
 import random
 import player
-#import :)
+#import :p
 
 
 
@@ -19,6 +19,8 @@ def new_player():
   theclass = input("Please type the letter of the class")
   switch theclass:
     case "R":
+
+		theplayer = Player(name, 200, 150, 100, 50, 100, 50) #ranger attributes
 def login():
   username = input("Username: ")
   password = input("password: ")
