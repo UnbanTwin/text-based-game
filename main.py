@@ -6,7 +6,8 @@ import player
 
 
 def new_player():
-  print ("First of all, please select a class:")
+  name = input("First, who are you?")
+  print ("Now, please select a class:")
   print ("\t[R]anger")
   print ("\t[W]arrior")
   print ("\t[M]age")
@@ -19,6 +20,7 @@ def new_player():
   theclass = input("Please type the letter of the class")
   switch theclass:
     case "R":
+		theplayer = Player(name, 200, 150, 100, 50, 100, 50) #ranger attributes
       
   
 startgame = input("If you are a new player type new player \nif you are an existing player type login\n ")
