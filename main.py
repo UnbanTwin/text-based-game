@@ -1,6 +1,6 @@
 import random
 import player
-#import :)
+#import :P
 
 
 
@@ -20,15 +20,9 @@ def new_player():
   
 startgame = input("If you are a new player type new player \nif you are an existing player type login\n ")
 
-if startgame == "new player":
-    new_player();
-
-
-elif startgame == "login":
-    #logstuff
-    print("this is where login stuff will happen, yay")
+if startgame.lower() == "new player":
+    new_player();  
   
-else:
-    print("unknown command")
-
+  
+  
 
