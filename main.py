@@ -6,7 +6,8 @@ import player
 
 
 def new_player():
-  print ("First of all, please select a class:")
+  name = input("First, who are you?")
+  print ("Now, please select a class:")
   print ("\t[R]anger")
   print ("\t[W]arrior")
   print ("\t[M]age")
