@@ -4,7 +4,8 @@ import hashlib
 #import :P
 
 
-
+def startgame():
+  
 
 def new_player():
   name = input("First, who are you?\n>>")
@@ -31,6 +32,10 @@ def new_player():
 def login():
   username = input("Username: ")
   password = input("password: ")
+  if username == player_username:
+  if password == player_password:
+    startgame()
+    
 def register():
   player_username = input("Enter a username: ")
   player_password = input("Enter a password: ")
