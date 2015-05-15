@@ -4,7 +4,7 @@ import hashlib
 #import :P
 
 
-def startgame():
+#def startgame():
   
 
 def new_player():
@@ -20,21 +20,22 @@ def new_player():
   print ("\t[D]ruid")
   print ("\t[C]leric")
   theclass = input("Please type the letter of the class:\n>>")
+  if theclass == "R":
+      theplayer = Player(name, 200, 150, 100, 50, 100, 50) #ranger attributes
+  elif theclass == "W":
+      theplayer = Player(name, 250, 190, 70, 20, 125, 75)
+
+  elif theclass == "M":
+      theplayer = Player(name, 250, 190, 70, 20, 100, 75)
   
-  switch theclass:
-    case "R":
-	theplayer = Player(name, 200, 150, 100, 50, 100, 50) #ranger attributes
-    case "W":
-    	theplayer = Player(name, 250, 190, 70, 20, 125, 75)
-    case "M":
-    	theplayer = Player(name, 250, 190, 70, 20, 100, 75)
+ 
 
 def login():
   username = input("Username: ")
   password = input("password: ")
-  if username == player_username:
-  if password == player_password:
-    startgame()
+  #if username == player_username:
+  #if password == player_password:
+    #startgame()
     
 def register():
   player_username = input("Enter a username: ")
