@@ -1,12 +1,13 @@
 import random
 import player
+import hashlib
 #import :P
 
 
 
 
 def new_player():
-  name = input("First, who are you?")
+  name = input("First, who are you?\n>>")
   print ("Now, please select a class:")
   print ("\t[R]anger")
   print ("\t[W]arrior")
@@ -17,17 +18,20 @@ def new_player():
   print ("\t[C]leric")
   print ("\t[D]ruid")
   print ("\t[C]leric")
-  theclass = input("Please type the letter of the class")
+  theclass = input("Please type the letter of the class:\n>>")
   switch theclass:
     case "R":
-
-		theplayer = Player(name, 200, 150, 100, 50, 100, 50) #ranger attributes
+	theplayer = Player(name, 200, 150, 100, 50, 100, 50) #ranger attributes
+    case "W":
+    	theplayer = Player(name, 250, 190, 70, 20, 125, 75)
+    case "M":
+    	theplayer = Player(name, 250, 190, 70, 20, 100, 75)
 def login():
   username = input("Username: ")
   password = input("password: ")
 def register():
-  player_username = input("enter a username: ")
-  player_password = input("enter a password: ")
+  player_username = input("Enter a username: ")
+  player_password = hashlib.()input("Enter a password: ")
   
       
   
