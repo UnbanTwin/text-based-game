@@ -1,6 +1,6 @@
 import random
 import player
-#import :p
+#import :P
 
 
 
