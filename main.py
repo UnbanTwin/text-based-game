@@ -63,7 +63,7 @@ def new_player():
       theplayer = Player(name, 125, 100, 500, 450, 150, 100)
   else:
       print("Please select a letter of a class")
-      input("lll")
+      new_player()
   
  
 
