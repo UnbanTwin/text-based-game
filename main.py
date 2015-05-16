@@ -43,27 +43,44 @@ def new_player():
   theclass = input("Please type the letter of the class:\n>>")
   if theclass.upper() == "R":
       theplayer = Player(name, 200, 150, 100, 50, 100, 50) #ranger attributes
+      aclass = "Ranger"
   elif theclass.upper() == "W":
       theplayer = Player(name, 250, 190, 70, 20, 125, 75)
+      aclass = "Warrior"
   elif theclass.upper() == "M":
       theplayer = Player(name, 225, 200, 350, 200, 100, 75)
+      aclass = "Mage"
   elif theclass.upper() == "O":
       theplayer = Player(name, 325, 300, 10, 0, 150, 100)
+      aclass = "Rouge"
   elif theclass.upper() == "P":
       theplayer = Player(name, 225, 100, 50, 100, 150, 100)
+      aclass = "Paladin"
   elif theclass.upper() == "B":
       theplayer = Player(name, 400, 250, 1, 0, 100, 50)
+      aclass = "Barbarian"
   elif theclass.upper() == "C":
       theplayer = Player(name, 200, 190, 50, 100, 200, 190)
+      aclass = "Cleric"
   elif theclass.upper() == "D":
       theplayer = Player(name, 125, 100, 450, 400, 125, 100)
+      aclass = "Druid"
   elif theclass.upper() == "H":
       theplayer = Player(name, 325, 300, 250, 200, 150, 100)
+      aclass = "Healer"
   elif theclass.upper() == "K":
       theplayer = Player(name, 125, 100, 500, 450, 150, 100)
+      aclass = "Dark Mage"
   else:
       print("Please select a letter of a class")
       new_player()
+      return
+      
+  print("You have selected a " + aclass + " called "+ name + ".")
+  sure = input("Are you sure?[Y/N]")
+  if sure.upper() == "N" || sure.upper() == "NO":
+    new_player()
+    return
   
  
 
