@@ -60,7 +60,7 @@ def new_player():
       theplayer = Player(name, 400, 250, 1, 0, 100, 50)
       aclass = "Barbarian"
   elif theclass.upper() == "C":
-      theplayer = Player(name, 200, 190, 50, 100, 200, 190)
+      theplayer = Player(name, 200, 190, 100, 50, 200, 190)
       aclass = "Cleric"
   elif theclass.upper() == "D":
       theplayer = Player(name, 125, 100, 450, 400, 125, 100)
@@ -81,6 +81,8 @@ def new_player():
   if sure.upper() == "N" or sure.upper() == "NO":
     new_player()
     return
+  print("No going back now!")
+  print("Your charicter has " + str(theplayer.hp) + " health, " + str(theplayer.mana) + " mana, and " + str(theplayer.skill) + " skill.")
   
  
 
