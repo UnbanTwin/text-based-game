@@ -24,6 +24,7 @@ class Player(object):
       return self.hp
 
 #def startgame():
+  #comment
   
 
 def new_player():
