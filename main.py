@@ -78,7 +78,7 @@ def new_player():
       
   print("You have selected a " + aclass + " called "+ name + ".")
   sure = input("Are you sure?[Y/N]")
-  if sure.upper() == "N" || sure.upper() == "NO":
+  if sure.upper() == "N" or sure.upper() == "NO":
     new_player()
     return
   
