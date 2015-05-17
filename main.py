@@ -5,7 +5,7 @@ import player
 import random
 import time
 
-gamename = "title here"
+gamename = "foobarbaz"
 
 class Player(object):
     def __init__(self, name, maxhp, minhp, maxmana, minmana, maxskill, minskill):
@@ -95,13 +95,13 @@ def new_player():
   print("Your charicter has " + str(theplayer.hp) + " health, " + str(theplayer.mana) + " mana, and " + str(theplayer.skill) + " skill.")
 
   file = open("user.txt", "w")
-  file.write(name)
+  file.write(name + "\n")
   file.close()
   _startgame()
 def login():
   username = input("Username: ")
   if username in open('user.txt').read():
-      print ("loged in")
+      print ("logged in")
   else:
       print("incorrect username")
       login()
