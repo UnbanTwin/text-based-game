@@ -28,7 +28,7 @@ class Player(object):
         return self.hp
     
 def prompt(x):
-  print(x.name + ":" + x.hp + " HP>>")
+    print(x.name + ":" + str(x.hp) + " HP")
 
 
   
@@ -124,6 +124,6 @@ if startgame.lower() == "login":
     login() 
   
 def prompt(x):
-  print(x.name + ":" + str(x.hp) + " HP>>")
+  print(x.name + ":" + str(x.hp) + " HP")
   
 
