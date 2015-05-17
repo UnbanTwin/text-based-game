@@ -3,6 +3,7 @@ import player
 #import hashlib
 #import :P
 import random
+import time
 
 gamename = "title here"
 
@@ -15,6 +16,7 @@ class Player(object):
       #self.race = race
       self.gold = 200 + random.randint(50, 200)
       self.inventory = []
+        
     
     def check_dead(self):
       if self.hp < 0:
@@ -24,6 +26,7 @@ class Player(object):
         return 0
       else:
         return self.hp
+    
 
 
 
@@ -94,6 +97,7 @@ def new_player():
   file = open("user.txt", "w")
   file.write(name)
   file.close()
+  _startgame()
 def login():
   username = input("Username: ")
   if username in open('user.txt').read():
