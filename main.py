@@ -97,10 +97,10 @@ def new_player():
   print("No going back now!")
   print("Your charicter has " + str(theplayer.hp) + " health, " + str(theplayer.mana) + " mana, and " + str(theplayer.skill) + " skill.")
 
-  file = open("user.txt", "a")
+  file = open("user.txt", "w")
   file.write(name + "\n")
   file.close()
-  userfile = open("./users/" + name + ".txt", "a")
+  userfile = open("users/" + name + ".txt", "w")
   userfile.close()
   _startgame()
 def login():
