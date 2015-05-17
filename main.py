@@ -27,7 +27,8 @@ class Player(object):
       else:
         return self.hp
     
-
+def prompt(x):
+  print(x.name + ":" + x.hp + " HP>>")
 
 
   
@@ -81,9 +82,11 @@ def new_player():
       new_player()
       return
 
-
   def _startgame():
       print("Welcome to " + gamename + " " + name)
+      print("To Exit, type exit\nYou can type anywhere you see")
+      prompt(theplayer)
+      
       return
       
   print("You have selected a " + aclass + " called "+ name + ".")
@@ -103,10 +106,11 @@ def new_player():
 def login():
   username = input("Username: ")
   if username in open('user.txt').read():
-      print ("logged in")
+      print ("Existing Profile Loaded")
   else:
-      print("incorrect username")
-      login()
+      print("You are not known to the world of " + gamename)
+      print("Creating new account:")
+      new_player()
   return
     
 startgame = input("If you are a new player type new \nif you are an existing player type login\n ")
@@ -119,6 +123,7 @@ if startgame.lower() == "new":
 if startgame.lower() == "login":
     login() 
   
-
+def prompt(x):
+  print(x.name + ":" + str(x.hp) + " HP>>")
   
 
