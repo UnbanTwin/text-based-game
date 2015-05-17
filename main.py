@@ -4,6 +4,8 @@ import player
 #import xD
 import random
 
+gamename = "title here"
+
 class Player(object):
     def __init__(self, name, maxhp, minhp, maxmana, minmana, maxskill, minskill):
       self.hp = random.randint(minhp, maxhp)
@@ -23,8 +25,8 @@ class Player(object):
       else:
         return self.hp
 
-#def startgame():
-  #comment
+
+
   
 
 def new_player():
@@ -75,6 +77,9 @@ def new_player():
       print("Please select a letter of a class")
       new_player()
       return
+  def _startgame():
+      print("Welcome to " + gamename + " " + name)
+      return
       
   print("You have selected a " + aclass + " called "+ name + ".")
   sure = input("Are you sure?[Y/N]")
@@ -83,29 +88,32 @@ def new_player():
     return
   print("No going back now!")
   print("Your charicter has " + str(theplayer.hp) + " health, " + str(theplayer.mana) + " mana, and " + str(theplayer.skill) + " skill.")
-  
- 
-
+  _startgame() 
 def login():
   username = input("Username: ")
   password = input("password: ")
   #if username == player_username:
   #if password == player_password:
-    #startgame()
+  _startgame()
+  start-game
+  return
     
 def register():
   player_username = input("Enter a username: ")
   player_password = input("Enter a password: ")
-  
+  return
       
   
 startgame = input("If you are a new player type new \nif you are an existing player type login\n ")
 
+
+
 if startgame.lower() == "new":
     new_player()
+    
 if startgame.lower() == "login":
     login() 
   
-  
+
   
 
