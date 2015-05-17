@@ -26,10 +26,7 @@ class Player(object):
         return self.hp
 
 
-def password_():
-    file = open('password.txt', 'r')
-    file.read()
-    file.close()
+
   
 
 def new_player():
