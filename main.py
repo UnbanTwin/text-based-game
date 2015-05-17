@@ -41,26 +41,48 @@ def new_player():
   print ("\t[H]ealer")
   print ("\t[K]Dark mage")
   theclass = input("Please type the letter of the class:\n>>")
-  if theclass == "R":
+  if theclass.upper() == "R":
       theplayer = Player(name, 200, 150, 100, 50, 100, 50) #ranger attributes
-  elif theclass == "W":
+      aclass = "Ranger"
+  elif theclass.upper() == "W":
       theplayer = Player(name, 250, 190, 70, 20, 125, 75)
-  elif theclass == "M":
+      aclass = "Warrior"
+  elif theclass.upper() == "M":
       theplayer = Player(name, 225, 200, 350, 200, 100, 75)
-  elif theclass == "O":
+      aclass = "Mage"
+  elif theclass.upper() == "O":
       theplayer = Player(name, 325, 300, 10, 0, 150, 100)
-  elif theclass == "P":
+      aclass = "Rouge"
+  elif theclass.upper() == "P":
       theplayer = Player(name, 225, 100, 50, 100, 150, 100)
-  elif theclass == "B":
+      aclass = "Paladin"
+  elif theclass.upper() == "B":
       theplayer = Player(name, 400, 250, 1, 0, 100, 50)
-  elif theclass == "C":
-      theplayer = Player(name, 200, 190, 50, 100, 200, 190)
-  elif theclass == "D":
+      aclass = "Barbarian"
+  elif theclass.upper() == "C":
+      theplayer = Player(name, 200, 190, 100, 50, 200, 190)
+      aclass = "Cleric"
+  elif theclass.upper() == "D":
       theplayer = Player(name, 125, 100, 450, 400, 125, 100)
-  elif theclass == "H":
+      aclass = "Druid"
+  elif theclass.upper() == "H":
       theplayer = Player(name, 325, 300, 250, 200, 150, 100)
-  elif theclass == "K":
+      aclass = "Healer"
+  elif theclass.upper() == "K":
       theplayer = Player(name, 125, 100, 500, 450, 150, 100)
+      aclass = "Dark Mage"
+  else:
+      print("Please select a letter of a class")
+      new_player()
+      return
+      
+  print("You have selected a " + aclass + " called "+ name + ".")
+  sure = input("Are you sure?[Y/N]")
+  if sure.upper() == "N" or sure.upper() == "NO":
+    new_player()
+    return
+  print("No going back now!")
+  print("Your charicter has " + str(theplayer.hp) + " health, " + str(theplayer.mana) + " mana, and " + str(theplayer.skill) + " skill.")
   
  
 
