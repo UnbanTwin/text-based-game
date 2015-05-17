@@ -124,6 +124,6 @@ if startgame.lower() == "login":
     login() 
   
 def prompt(x):
-  print(x.name + ":" + int(x.hp) + " HP>>")
+  print(x.name + ":" + str(x.hp) + " HP>>")
   
 
