@@ -1,7 +1,7 @@
 import random
 import player
 #import hashlib
-#import xD
+#import :P
 import random
 
 gamename = "title here"
