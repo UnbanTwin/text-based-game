@@ -91,12 +91,12 @@ def new_player():
   print("No going back now!")
   print("Your charicter has " + str(theplayer.hp) + " health, " + str(theplayer.mana) + " mana, and " + str(theplayer.skill) + " skill.")
 
-  file = open("password.txt", "w")
+  file = open("user.txt", "w")
   file.write(name)
   file.close()
 def login():
   username = input("Username: ")
-  if username in open('password.txt').read():
+  if username in open('user.txt').read():
       print ("loged in")
   else:
       print("incorrect username")
