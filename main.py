@@ -83,6 +83,8 @@ def new_player():
     return
   print("No going back now!")
   print("Your charicter has " + str(theplayer.hp) + " health, " + str(theplayer.mana) + " mana, and " + str(theplayer.skill) + " skill.")
+  register()
+  login()
   
  
 
