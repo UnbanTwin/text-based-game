@@ -97,6 +97,8 @@ def new_player():
   file = open("user.txt", "a")
   file.write(name + "\n")
   file.close()
+  userfile = open("./users/" + name + ".txt", "a")
+  userfile.close()
   _startgame()
 def login():
   username = input("Username: ")
