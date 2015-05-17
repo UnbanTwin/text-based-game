@@ -103,10 +103,11 @@ def new_player():
 def login():
   username = input("Username: ")
   if username in open('user.txt').read():
-      print ("logged in")
+      print ("Existing Profile Loaded")
   else:
-      print("incorrect username")
-      login()
+      print("You are not known to the world of " + gamename)
+      print("Creating new account:")
+      new_player()
   return
     
 startgame = input("If you are a new player type new \nif you are an existing player type login\n ")
