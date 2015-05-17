@@ -10,7 +10,7 @@ class Player(object):
       self.mana = random.randint(minmana, maxmana)
       self.skill = random.randint(minskill, maxskill)
       self.name = name
-      self.race = race
+      #self.race = race
       self.gold = 200 + random.randint(50, 200)
       self.inventory = []
     
