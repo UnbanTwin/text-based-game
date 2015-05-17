@@ -27,7 +27,8 @@ class Player(object):
       else:
         return self.hp
     
-
+def prompt(x):
+  print(x.name + ":" + x.hp + " HP>>")
 
 
   
@@ -81,9 +82,11 @@ def new_player():
       new_player()
       return
 
-
   def _startgame():
       print("Welcome to " + gamename + " " + name)
+      print("To Exit, type exit\nYou can type anywhere you see")
+      prompt(theplayer)
+      
       return
       
   print("You have selected a " + aclass + " called "+ name + ".")
@@ -120,6 +123,7 @@ if startgame.lower() == "new":
 if startgame.lower() == "login":
     login() 
   
-
+def prompt(x):
+  print(x.name + ":" + int(x.hp) + " HP>>")
   
 
