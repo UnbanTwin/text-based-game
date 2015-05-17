@@ -88,14 +88,14 @@ def new_player():
     return
   print("No going back now!")
   print("Your charicter has " + str(theplayer.hp) + " health, " + str(theplayer.mana) + " mana, and " + str(theplayer.skill) + " skill.")
-  _startgame() 
+  register()
+  login()
 def login():
   username = input("Username: ")
   password = input("password: ")
   #if username == player_username:
   #if password == player_password:
-  _startgame()
-  start-game
+ 
   return
     
 def register():
