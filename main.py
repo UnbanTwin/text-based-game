@@ -7,7 +7,7 @@ import random
 class Player(object):
     def __init__(self, name, maxhp, minhp, maxmana, minmana, maxskill, minskill):
       self.hp = random.randint(minhp, maxhp)
-      self.mana = random.randint(minman, maxman)
+      self.mana = random.randint(minmana, maxmana)
       self.skill = random.randint(minskill, maxskill)
       self.name = name
       self.race = race
