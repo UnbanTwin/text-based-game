@@ -26,7 +26,10 @@ class Player(object):
         return self.hp
 
 
-
+def password_():
+    file = open('password.txt', 'r')
+    file.read()
+    file.close()
   
 
 def new_player():
@@ -77,6 +80,8 @@ def new_player():
       print("Please select a letter of a class")
       new_player()
       return
+
+
   def _startgame():
       print("Welcome to " + gamename + " " + name)
       return
@@ -88,22 +93,19 @@ def new_player():
     return
   print("No going back now!")
   print("Your charicter has " + str(theplayer.hp) + " health, " + str(theplayer.mana) + " mana, and " + str(theplayer.skill) + " skill.")
-  register()
-  login()
+
+  file = open("password.txt", "w")
+  file.write(name)
+  file.close()
 def login():
   username = input("Username: ")
-  password = input("password: ")
-  #if username == player_username:
-  #if password == player_password:
- 
+  if username in open('password.txt').read():
+      print ("loged in")
+  else:
+      print("incorrect username")
+      login()
   return
     
-def register():
-  player_username = input("Enter a username: ")
-  player_password = input("Enter a password: ")
-  return
-      
-  
 startgame = input("If you are a new player type new \nif you are an existing player type login\n ")
 
 
