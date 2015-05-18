@@ -113,7 +113,8 @@ def login():
     
   else:
       print("You are not known to the world of " + gamename)
-      print("Creating new account:")
+      print("Creating new account...")
+      time.sleep(2)
       new_player()
   return
     
