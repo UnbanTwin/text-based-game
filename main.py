@@ -88,8 +88,8 @@ def new_player():
       prompt(theplayer)
     
       
-      return _startgame()
-      
+      return 
+     
   print("You have selected a " + aclass + " called "+ name + ".")
   sure = input("Are you sure?[Y/N]")
   if sure.upper() == "N" or sure.upper() == "NO":
@@ -105,10 +105,14 @@ def new_player():
   userfile.close()
   _startgame()
 
+
+
 def login():
   username = input("Username: ")
   if username in open('user.txt').read():
       print ("Existing Profile Loaded")
+      
+  
       
     
   else:
