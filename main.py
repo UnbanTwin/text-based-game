@@ -86,8 +86,9 @@ def new_player():
       print("Welcome to " + gamename + " " + name)
       print("To Exit, type exit\nYou can type anywhere you see")
       prompt(theplayer)
+    
       
-      return
+      return _startgame()
       
   print("You have selected a " + aclass + " called "+ name + ".")
   sure = input("Are you sure?[Y/N]")
@@ -103,17 +104,20 @@ def new_player():
   userfile = open("users/" + name + ".txt", "w")
   userfile.close()
   _startgame()
+
 def login():
   username = input("Username: ")
   if username in open('user.txt').read():
       print ("Existing Profile Loaded")
+      
+    
   else:
       print("You are not known to the world of " + gamename)
       print("Creating new account:")
       new_player()
   return
     
-startgame = input("If you are a new player type new \nif you are an existing player type login\n ")
+startgame = input("If you are a new player type new \nif you are an existing player type login\n>>")
 
 
 
