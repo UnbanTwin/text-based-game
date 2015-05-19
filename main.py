@@ -4,6 +4,7 @@ import player
 #import :P
 import random
 import time
+import sys
 
 gamename = "foobarbaz"
 
@@ -27,10 +28,17 @@ class Player(object):
       else:
         return self.hp
     
+#def prompt(x):
+#    print(">>"+x.name + ":" + str(x.hp) + " HP>>")
+
 def prompt(x):
-    print(x.name + ":" + str(x.hp) + " HP")
-
-
+  
+  cmd = input(">>"+x.name + ":" + str(x.hp) + " HP>>")
+  if (cmd == "exit"):
+    sys.exit()
+  else:
+    return cmd
+# More functionality coming soon
   
 
 def new_player():
@@ -138,7 +146,7 @@ if startgame.lower() == "new":
 if startgame.lower() == "login":
     login() 
   
-def prompt(x):
-  print(x.name + ":" + str(x.hp) + " HP")
+
+
   
 
