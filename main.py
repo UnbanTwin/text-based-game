@@ -105,12 +105,16 @@ def new_player():
   userfile.close()
   _startgame()
 
-
+def _startgame(gamename, name, theplayer):
+      print("Welcome to " + gamename + " " + name)
+      print("To Exit, type exit\nYou can type anywhere you see")
+      prompt(theplayer)
 
 def login():
   username = input("Username: ")
   if username in open('user.txt').read():
       print ("Existing Profile Loaded")
+      _startgame(gamename, name, theplayer)
       
       
       
