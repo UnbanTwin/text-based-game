@@ -27,7 +27,10 @@ class Player(object):
         return 0
       else:
         return self.hp
-    
+def _startgame(gamename, name, theplayer):
+      print("Welcome to " + gamename + " " + name)
+      print("To Exit, type exit\nYou can type anywhere you see")
+      prompt(theplayer)    
 #def prompt(x):
 #    print(">>"+x.name + ":" + str(x.hp) + " HP>>")
 
@@ -90,10 +93,7 @@ def new_player():
       new_player()
       return
 
-  def _startgame():
-      print("Welcome to " + gamename + " " + name)
-      print("To Exit, type exit\nYou can type anywhere you see")
-      prompt(theplayer)
+ 
     
       
       return 
@@ -111,24 +111,16 @@ def new_player():
   file.close()
   userfile = open("users/" + name + ".txt", "w")
   userfile.close()
-  _startgame()
+  _startgame(gamename, name, theplayer)
 
-def _startgame(gamename, name, theplayer):
-      print("Welcome to " + gamename + " " + name)
-      print("To Exit, type exit\nYou can type anywhere you see")
-      prompt(theplayer)
+
 
 def login():
   username = input("Username: ")
   if username in open('user.txt').read():
       print ("Existing Profile Loaded")
       _startgame(gamename, name, theplayer)
-      
-      
-      
-  
-      
-    
+         
   else:
       print("You are not known to the world of " + gamename)
       print("Creating new account...")
