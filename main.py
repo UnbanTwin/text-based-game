@@ -27,6 +27,7 @@ class Player(object):
         return 0
       else:
         return self.hp
+    
 def _startgame(gamename, name, theplayer):
       print("Welcome to " + gamename + " " + name)
       print("To Exit, type exit\nYou can type anywhere you see")
