@@ -1,24 +1,22 @@
+# Imports
 import random
 import player
-#import hashlib
-#import :P
 import random
 import time
 import sys
-
+# Global Varibles
 gamename = "foobarbaz"
-
+# Classes
 class Player(object):
     def __init__(self, name, maxhp, minhp, maxmana, minmana, maxskill, minskill):
       self.hp = random.randint(minhp, maxhp)
       self.mana = random.randint(minmana, maxmana)
       self.skill = random.randint(minskill, maxskill)
       self.name = name
-      #self.race = race
       self.gold = 200 + random.randint(50, 200)
       self.inventory = []
         
-    
+        
     def check_dead(self):
       if self.hp < 0:
         print ("You Died...")
@@ -32,8 +30,7 @@ def _startgame(gamename, name, theplayer):
       print("Welcome to " + gamename + " " + name)
       print("To Exit, type exit\nYou can type anywhere you see")
       prompt(theplayer)    
-#def prompt(x):
-#    print(">>"+x.name + ":" + str(x.hp) + " HP>>")
+
 
 def prompt(x):
   
@@ -129,10 +126,8 @@ def login():
       new_player()
   return
     
+# Start Code
 startgame = input("If you are a new player type new \nif you are an existing player type login\n>>")
-
-
-
 if startgame.lower() == "new":
     new_player()
     
