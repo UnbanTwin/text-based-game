@@ -34,9 +34,12 @@ def _startgame(gamename, name, theplayer):
 
 def prompt(x):
   
-  cmd = input(">>"+x.name + ":" + str(x.hp) + " HP>>")
+  cmd = input(">>"+x.name + ":" + str(x.hp) + " HP>>").lower
   if (cmd == "exit"):
     sys.exit()
+  elif (cmd == "i" or cmd == "inventory"):
+    show_inventory(x)
+    
   else:
     return cmd
 # More functionality coming soon
@@ -125,6 +128,11 @@ def login():
       time.sleep(1)
       new_player()
   return
+def show_inventory(x):
+  print("""------INVENTORY------""")
+  for obj in x.inventory:
+    print(obj.name, obj.quantity)
+  print("""---------------------""")
     
 # Start Code
 startgame = input("If you are a new player type new \nif you are an existing player type login\n>>")
