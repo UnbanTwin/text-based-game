@@ -4,8 +4,9 @@ import player
 import random
 import time
 import sys
-from colorama import init, Fore, Back, Style
+import colorama
 # Global Varibles
+colorama.init()
 gamename = "foobarbaz"
 # Classes
 class Player(object):
