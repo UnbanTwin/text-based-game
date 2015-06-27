@@ -2,3 +2,4 @@
 users
 *.pyc
 user.txt
+__pycache__
