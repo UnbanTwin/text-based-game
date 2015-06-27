@@ -4,10 +4,11 @@ import player
 import random
 import time
 import sys
-import colorama
+from colorama import init, Fore, Back, Style
 # Global Varibles
-colorama.init()
+init()
 gamename = "foobarbaz"
+
 # Classes
 class Player(object):
     def __init__(self, name, maxhp, minhp, maxmana, minmana, maxskill, minskill):
@@ -27,11 +28,13 @@ class Player(object):
         return 0
       else:
         return self.hp
-    
+# Create global player with default values
+theplayer = Player("", 0, 0, 0, 0, 0, 0)   
 def _startgame(gamename, name, theplayer):
       print("Welcome to " + gamename + " " + name)
       print("To Exit, type exit\nYou can type anywhere you see")
-      prompt(theplayer)    
+      while True:
+        prompt(theplayer)    
 
 
 def prompt(x):
