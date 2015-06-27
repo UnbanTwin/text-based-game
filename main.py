@@ -29,7 +29,12 @@ class Player(object):
 def _startgame(gamename, name, theplayer):
       print("Welcome to " + gamename + " " + name)
       print("To Exit, type exit\nYou can type anywhere you see")
-      prompt(theplayer)    
+      prompt(theplayer)
+      if prompt(theplayer) == "Inventory":
+          show_inventory()
+      else:
+          prompt(theplayer)
+          
 
 
 def prompt(x):
