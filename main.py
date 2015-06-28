@@ -5,6 +5,9 @@ import random
 import time
 import sys
 # Global Varibles
+init()
+gamename = Fore.RED + "foobarbaz" + Fore.RESET
+
 gamename = "foobarbaz"
 # Classes
 class Player(object):
