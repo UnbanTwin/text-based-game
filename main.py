@@ -4,6 +4,7 @@ import player
 import random
 import time
 import sys
+from colorama import init, Fore, Back, Style
 # Global Varibles
 init()
 gamename = Fore.RED + "foobarbaz" + Fore.RESET
@@ -143,6 +144,12 @@ def show_inventory(x):
   print("""---------------------""")
     
 # Start Code
+print(Back.BLUE + """|-----------------|
+|                 |
+|    Welcome to   |
+|    """ + Fore.RED + Back.WHITE + gamename + Fore.RESET + Back.BLUE + """    |
+|                 |
+|-----------------|""" + Back.RESET)
 startgame = input("If you are a new player type new \nif you are an existing player type login\n>>")
 if startgame.lower() == "new":
     new_player()
