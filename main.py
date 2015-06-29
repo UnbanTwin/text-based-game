@@ -144,13 +144,18 @@ def show_inventory(x):
   print("""---------------------""")
     
 # Start Code
-print(Back.BLUE + """|-----------------|
+print(Back.RED + """|-----------------|
 |                 |
 |    Welcome to   |
-|    """ + Fore.RED + Back.WHITE + gamename + Fore.RESET + Back.BLUE + """    |
+|    """ + Fore.RED + Back.WHITE + gamename + Fore.RESET + Back.RED + """    |
 |                 |
-|-----------------|""" + Back.RESET)
-startgame = input("If you are a new player type new \nif you are an existing player type login\n>>")
+|-----------------|""" + Back.BLACK +Fore.WHITE)
+startgame = input("""
+|---------------------SELECT PLAYER---------------------|
+|    new    |    Adds a player                          |
+|    login  |    Loads the profile of a existing player |
+|-------------------------------------------------------|
+>>""")
 if startgame.lower() == "new":
     new_player()
     
